@@ -55,9 +55,11 @@ export const Navbar: React.FC<NavbarProps> = (props): JSX.Element => {
 				zIndex={1}
 			>
 				<Flex align="center" mr={5}>
-					<Heading as="h1" size="md">
-						Hung Nguyen
-					</Heading>
+					<Link href="/">
+						<Heading as="h1" size="md">
+							Hung Nguyen
+						</Heading>
+					</Link>
 				</Flex>
 
 				<Stack spacing="24px" direction={['row']}>
