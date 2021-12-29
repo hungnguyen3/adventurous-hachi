@@ -1,15 +1,12 @@
-import { Box, Heading } from '@chakra-ui/react';
-import { Navbar } from '../components/Navbar';
-import { Footer } from '../components/Footer';
+import { Box, Text } from '@chakra-ui/react';
+import { Layout } from '../components/Layout';
 
 const Posts: React.FC<{}> = ({}) => (
-	<Box>
-		<Navbar path={'/posts'} />
+	<Layout path={'/posts'}>
 		<Box>
-			<Heading>Posts</Heading>
+			<Text>Posts</Text>
 		</Box>
-		<Footer />
-	</Box>
+	</Layout>
 );
 
 export default Posts;

@@ -16,6 +16,9 @@ const WorkPosition: React.FC<WorkPositionProps> = (props): JSX.Element => (
 	<Box p={3} mb={6}>
 		<Image src={props.image}></Image>
 		<Text>{props.companyName}</Text>
+		<Text>
+			({props.startDate.toDateString()} - {props.endDate.toDateString()})
+		</Text>
 		<Text>{props.positionName}</Text>
 		{props.description.map(element => {
 			<Text>{element}</Text>;
@@ -24,7 +27,7 @@ const WorkPosition: React.FC<WorkPositionProps> = (props): JSX.Element => (
 );
 
 const Works: React.FC<{}> = ({}) => (
-	<Layout>
+	<Layout path={'/works'}>
 		<Heading>Works</Heading>
 		<Container centerContent>
 			<WorkPosition

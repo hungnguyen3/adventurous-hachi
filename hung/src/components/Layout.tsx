@@ -3,12 +3,13 @@ import { Footer } from './Footer';
 import { Navbar } from './Navbar';
 
 interface LayoutProps {
-	children: JSX.Element[];
+	path: string;
+	children: JSX.Element[] | JSX.Element;
 }
 
 export const Layout: React.FC<LayoutProps> = (props): JSX.Element => (
 	<Flex flexDirection="column">
-		<Navbar path="/" />
+		<Navbar path={props.path} />
 		<Container maxW="container.sm">{props.children}</Container>
 		<Footer />
 	</Flex>

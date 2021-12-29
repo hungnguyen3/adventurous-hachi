@@ -11,7 +11,7 @@ import Link from 'next/link';
 import { Layout } from '../components/Layout';
 
 const Index: React.FC<{}> = ({}) => (
-	<Layout>
+	<Layout path={'/'}>
 		<Box
 			mt={20}
 			mb={6}
