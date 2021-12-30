@@ -4,6 +4,7 @@ import { Layout } from '../components/Layout';
 interface ProjectProps {
 	name: string;
 	image: string;
+	about: string;
 	description: string[];
 	languages: string[];
 	tools: string[];
@@ -13,6 +14,7 @@ const Project: React.FC<ProjectProps> = (props): JSX.Element => (
 	<Box p={3} mb={6}>
 		<Image src={props.image}></Image>
 		<Text>{props.name}</Text>
+		<Text>{props.about}</Text>
 		{props.description.map(element => {
 			<Text>{element}</Text>;
 		})}
@@ -28,6 +30,7 @@ const Projects: React.FC<{}> = ({}) => (
 				image={
 					'https://media.istockphoto.com/vectors/sample-sign-sample-square-speech-bubble-sample-vector-id1161352480?k=20&m=1161352480&s=612x612&w=0&h=uVaVErtcluXjUNbOuvGF2_sSib9dZejwh4w8CwJPc48='
 				}
+				about={'An android app that connects people with their lost pets'}
 				description={[]}
 				languages={['JavaScript']}
 				tools={[
