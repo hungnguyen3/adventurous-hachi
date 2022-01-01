@@ -1,6 +1,7 @@
-import { Box, Container, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Button, Container, Heading, Image, Text } from '@chakra-ui/react';
 import { Layout } from '../components/Layout';
-
+import { data } from '../public/projects/projectDetails';
+import { FaGithub, FaInfoCircle } from 'react-icons/fa';
 interface ProjectProps {
 	name: string;
 	image: string;
@@ -11,40 +12,45 @@ interface ProjectProps {
 }
 
 const Project: React.FC<ProjectProps> = (props): JSX.Element => (
-	<Box p={3} mb={6}>
-		<Image src={props.image}></Image>
-		<Text>{props.name}</Text>
+	<Box p={3} mb={6} display="flex" flexDirection="column">
+		<Image boxSize="200px" src={props.image}></Image>
+		<Text mt={2} fontSize={20}>
+			{props.name}
+		</Text>
 		<Text>{props.about}</Text>
 		{props.description.map(element => {
 			<Text>{element}</Text>;
 		})}
+		<Box>
+			<Button>
+				<FaInfoCircle />
+				Learn more
+			</Button>
+			<Button>
+				<FaGithub />
+				View Code
+			</Button>
+		</Box>
 	</Box>
 );
 
 const Projects: React.FC<{}> = ({}) => (
 	<Layout path={'/projects'}>
 		<Heading>Works</Heading>
-		<Container centerContent>
-			<Project
-				name={'Lost Pets Finder'}
-				image={
-					'https://media.istockphoto.com/vectors/sample-sign-sample-square-speech-bubble-sample-vector-id1161352480?k=20&m=1161352480&s=612x612&w=0&h=uVaVErtcluXjUNbOuvGF2_sSib9dZejwh4w8CwJPc48='
-				}
-				about={'An android app that connects people with their lost pets'}
-				description={[]}
-				languages={['JavaScript']}
-				tools={[
-					'React Native',
-					'Node.js',
-					'MySQL',
-					'AWS',
-					'Firebase',
-					'Jest',
-					'Codacy',
-					'Travis CI',
-				]}
-			></Project>
-		</Container>
+		<Box display="flex" flexDirection="row">
+			{data.map(element => {
+				return (
+					<Project
+						name={element.name}
+						image={element.image}
+						about={element.about}
+						description={element.description}
+						languages={element.languages}
+						tools={element.tools}
+					/>
+				);
+			})}
+		</Box>
 	</Layout>
 );
 
