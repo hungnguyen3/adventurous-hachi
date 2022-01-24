@@ -2,6 +2,9 @@ import React from 'react';
 import { Box, Container, Heading, Image, Text } from '@chakra-ui/react';
 import { Layout } from '../../components/Layout';
 import { data } from '../../public/works/workDetails';
+import { WorkGrid } from '../../components/works/WorkGrid';
+import { WorkCard } from '../../components/works/WorkCard';
+import { works } from '../../components/works/_data';
 
 var months = [
 	'January',
@@ -51,6 +54,7 @@ const WorkPosition: React.FC<WorkPositionProps> = (props): JSX.Element => {
 		</Box>
 	);
 };
+
 const Works: React.FC<{}> = ({}) => (
 	<Layout path={'/works'}>
 		<Heading>Works</Heading>
@@ -67,6 +71,11 @@ const Works: React.FC<{}> = ({}) => (
 					/>
 				);
 			})}
+			<WorkGrid>
+				{works.map(work => (
+					<WorkCard key={work.id} work={work} />
+				))}
+			</WorkGrid>
 		</Container>
 	</Layout>
 );
