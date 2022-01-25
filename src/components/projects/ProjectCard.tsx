@@ -13,26 +13,19 @@ import {
 	useColorModeValue,
 } from '@chakra-ui/react';
 import * as React from 'react';
+import { FaGithub, FaInfoCircle } from 'react-icons/fa';
 import { months } from '../Months';
-import { Work } from './_data';
+import { Project } from './_data';
 
 interface Props {
-	work: Work;
+	project: Project;
 	rootProps?: StackProps;
 }
 
 // Chakra ui sample code snippet
-export const WorkCard = (props: Props) => {
-	const { work, rootProps } = props;
-	const { name, imageUrl } = work;
-
-	const startDate = `${
-		months[work.startDate.getMonth()]
-	} ${work.startDate.getFullYear()}`;
-
-	const endDate = work.endDate
-		? `${months[work.endDate.getMonth()]} ${work.endDate.getFullYear()}`
-		: 'Present';
+export const ProjectCard = (props: Props) => {
+	const { project, rootProps } = props;
+	const { name, imageUrl } = project;
 
 	return (
 		<Stack spacing={useBreakpointValue({ base: '4', md: '5' })} {...rootProps}>
@@ -55,25 +48,19 @@ export const WorkCard = (props: Props) => {
 					>
 						{name}
 					</Text>
-					<Text
-						fontWeight="medium"
-						color={useColorModeValue('gray.700', 'gray.400')}
-					>
-						({startDate} - {endDate})
-					</Text>
 				</Stack>
 			</Stack>
 			<Stack align="center">
-				<Button colorScheme="blue" isFullWidth>
-					Learn more
-				</Button>
-				<Link
-					textDecoration="underline"
-					fontWeight="medium"
-					color={useColorModeValue('gray.600', 'gray.400')}
-				>
-					Website
-				</Link>
+				<Box>
+					<Button>
+						<FaInfoCircle />
+						Learn more
+					</Button>
+					<Button>
+						<FaGithub />
+						View Code
+					</Button>
+				</Box>
 			</Stack>
 		</Stack>
 	);

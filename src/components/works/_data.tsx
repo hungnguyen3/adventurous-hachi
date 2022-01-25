@@ -7,7 +7,7 @@ export const works = [
 		startDate: new Date(2022, 1 - 1),
 		endDate: new Date(2022, 8 - 1),
 		imageUrl:
-			'https://s28.q4cdn.com/726611857/files/design/CopperleafLogo_Horizontal_JPG.jpg',
+			'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/kmu112bbotnbapfd3z7m',
 		description: '',
 	},
 	{
