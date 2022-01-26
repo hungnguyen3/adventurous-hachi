@@ -1,7 +1,7 @@
 export const works = [
 	{
 		id: '1',
-		name: 'Copperleaf Technologies',
+		name: 'Copperleaf Technologies Inc',
 		positionName: 'Software Developer',
 		startDate: new Date(2022, 1 - 1),
 		endDate: new Date(2022, 8 - 1),

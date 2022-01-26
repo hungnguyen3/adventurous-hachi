@@ -1,9 +1,16 @@
+import { HamburgerIcon } from '@chakra-ui/icons';
 import {
 	Box,
 	Container,
 	Flex,
 	Heading,
+	IconButton,
 	Link,
+	Menu,
+	MenuButton,
+	MenuDivider,
+	MenuItem,
+	MenuList,
 	Stack,
 	useBreakpointValue,
 	useColorModeValue,
@@ -37,6 +44,49 @@ const NavLink: React.FC<NavLinkProps> = (props): JSX.Element => {
 	);
 };
 
+interface NavigationMenuProps {
+	path: string;
+}
+
+const NavigationMenu: React.FC<NavigationMenuProps> = (props): JSX.Element => {
+	return (
+		<Menu>
+			<MenuButton
+				as={IconButton}
+				aria-label="Options"
+				icon={<HamburgerIcon />}
+				variant="outline"
+			/>
+			<MenuList>
+				<MenuItem>
+					<NavLink href={'/works'} toggleOn={props.path === '/works'}>
+						Works
+					</NavLink>
+				</MenuItem>
+				<MenuItem>
+					<NavLink href={'/projects'} toggleOn={props.path === '/projects'}>
+						Projects
+					</NavLink>
+				</MenuItem>
+				<MenuItem>
+					<NavLink href={'/posts'} toggleOn={props.path === '/posts'}>
+						Posts
+					</NavLink>
+				</MenuItem>
+				<MenuItem>
+					<NavLink href={'/hachi'} toggleOn={props.path === '/hachi'}>
+						Hachi
+					</NavLink>
+				</MenuItem>
+				<MenuDivider />
+				<MenuItem>
+					<DarkModeSwitch />
+				</MenuItem>
+			</MenuList>
+		</Menu>
+	);
+};
+
 export const Navbar: React.FC<NavbarProps> = (props): JSX.Element => {
 	const path = props.path;
 
@@ -65,7 +115,12 @@ export const Navbar: React.FC<NavbarProps> = (props): JSX.Element => {
 					</Link>
 				</Flex>
 
-				<Stack spacing="24px" direction={['row']}>
+				<Stack
+					direction={{ base: 'column', md: 'row' }}
+					display={{ base: 'none', md: 'flex' }}
+					spacing="20px"
+					alignItems="center"
+				>
 					<NavLink href={'/works'} toggleOn={props.path === '/works'}>
 						Works
 					</NavLink>
@@ -80,6 +135,12 @@ export const Navbar: React.FC<NavbarProps> = (props): JSX.Element => {
 					</NavLink>
 					<DarkModeSwitch />
 				</Stack>
+
+				<Box flex={1} align="right">
+					<Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+						<NavigationMenu path={props.path} />
+					</Box>
+				</Box>
 			</Container>
 		</Box>
 	);

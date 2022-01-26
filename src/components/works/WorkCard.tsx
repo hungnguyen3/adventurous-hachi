@@ -47,32 +47,30 @@ export const WorkCard = (props: Props) => {
 					/>
 				</AspectRatio>
 			</Box>
-			<Stack>
-				<Stack spacing="1" align="center">
-					<Text
-						align="center"
-						fontWeight="medium"
-						color={useColorModeValue('gray.700', 'gray.400')}
-					>
-						{name}
-					</Text>
-					<Text
-						align="center"
-						fontWeight="normal"
-						color={useColorModeValue('gray.700', 'gray.400')}
-					>
-						{positionName}
-					</Text>
-					<Text
-						align="center"
-						fontWeight="normal"
-						color={useColorModeValue('gray.700', 'gray.400')}
-					>
-						({startDate} - {endDate})
-					</Text>
-				</Stack>
+			<Stack spacing="1" align="center" isFullWidth={true}>
+				<Text
+					align="center"
+					fontWeight="medium"
+					color={useColorModeValue('gray.700', 'gray.400')}
+				>
+					{name}
+				</Text>
+				<Text
+					align="center"
+					fontWeight="normal"
+					color={useColorModeValue('gray.700', 'gray.400')}
+				>
+					{positionName}
+				</Text>
+				<Text
+					align="center"
+					fontWeight="normal"
+					color={useColorModeValue('gray.700', 'gray.400')}
+				>
+					({startDate} - {endDate})
+				</Text>
 			</Stack>
-			<Stack align="center">
+			{/* <Stack align="center">
 				<Button
 					variant="outline"
 					color={useColorModeValue('systemLightBlue', 'systemGreen')}
@@ -89,7 +87,7 @@ export const WorkCard = (props: Props) => {
 				>
 					Website
 				</Link>
-			</Stack>
+			</Stack> */}
 		</Stack>
 	);
 };

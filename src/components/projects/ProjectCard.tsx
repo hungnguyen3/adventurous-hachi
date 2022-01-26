@@ -55,7 +55,7 @@ export const ProjectCard = (props: Props) => {
 					{description}
 				</Text>
 			</Stack>
-			<Stack align="center">
+			{/* <Stack align="center">
 				<Button
 					variant="outline"
 					color={useColorModeValue('systemLightBlue', 'systemGreen')}
@@ -79,7 +79,7 @@ export const ProjectCard = (props: Props) => {
 						View Code
 					</Button>
 				</Link>
-			</Stack>
+			</Stack> */}
 		</Stack>
 	);
 };

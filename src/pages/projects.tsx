@@ -6,8 +6,7 @@ import { projects } from '../components/projects/_data';
 
 const Projects: React.FC<{}> = ({}) => (
 	<Layout path={'/projects'}>
-		<Heading>Works</Heading>
-		<Container mt={8} centerContent>
+		<Container mt={20} centerContent>
 			<WorkGrid>
 				{projects.map(project => (
 					<ProjectCard key={project.id} project={project} />
