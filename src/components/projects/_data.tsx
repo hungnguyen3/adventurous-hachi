@@ -1,4 +1,3 @@
-// chakra ui sample code snippet
 export const projects = [
 	{
 		id: '1',
@@ -15,8 +14,7 @@ export const projects = [
 		name: 'Ingredients Decoder',
 		imageUrl:
 			'https://github.com/hungnguyen3/Ingredient-Decoder/blob/main/z_images/components.PNG?raw=true',
-		description:
-			"Solution to products' ingredients and nutritional information",
+		description: 'Solution to ingredients and nutritional information',
 		languages: ['C', 'Python', 'Java', 'JavaScript', 'Verilog'],
 		tools: [
 			'Raspberry Pi 4',
@@ -53,7 +51,7 @@ export const projects = [
 	},
 	{
 		id: '4',
-		name: 'SMS SCHOOL - NWHACKS 2021',
+		name: 'SMS School',
 		imageUrl:
 			'https://raw.githubusercontent.com/hungnguyen3/nwHacks/master/images/8.PNG',
 		description:
@@ -64,7 +62,7 @@ export const projects = [
 	},
 	{
 		id: '5',
-		name: 'DANCING ROBOT',
+		name: 'Dancing Robot',
 		imageUrl:
 			'https://media.istockphoto.com/vectors/sample-sign-sample-square-speech-bubble-sample-vector-id1161352480?k=20&m=1161352480&s=612x612&w=0&h=uVaVErtcluXjUNbOuvGF2_sSib9dZejwh4w8CwJPc48=',
 		description: 'A dancing robot, capable of switching between 6 dance moves',
@@ -81,7 +79,7 @@ export const projects = [
 	},
 	{
 		id: '6',
-		name: 'LINE TRACKING ROBOT',
+		name: 'Line Tracking Robot',
 		imageUrl:
 			'https://media.istockphoto.com/vectors/sample-sign-sample-square-speech-bubble-sample-vector-id1161352480?k=20&m=1161352480&s=612x612&w=0&h=uVaVErtcluXjUNbOuvGF2_sSib9dZejwh4w8CwJPc48=',
 		description: 'An autonomous robotic vehicle',
@@ -98,7 +96,7 @@ export const projects = [
 	},
 	{
 		id: '7',
-		name: 'FINDING CHERRIES',
+		name: 'Finding Cherries',
 		imageUrl:
 			'https://media.istockphoto.com/vectors/sample-sign-sample-square-speech-bubble-sample-vector-id1161352480?k=20&m=1161352480&s=612x612&w=0&h=uVaVErtcluXjUNbOuvGF2_sSib9dZejwh4w8CwJPc48=',
 		description: 'A 2D game with classic Mario style',

@@ -3,6 +3,7 @@ import {
 	Button,
 	Heading,
 	Icon,
+	Stack,
 	Text,
 	useColorModeValue,
 } from '@chakra-ui/react';
@@ -18,7 +19,7 @@ const Index: React.FC<{}> = ({}) => (
 			p={3}
 			borderRadius="xl"
 			textAlign="center"
-			bg={useColorModeValue('#8a9ea7', '#8d9b6a')}
+			bg={useColorModeValue('systemLightBlue', 'systemGreen')}
 		>
 			Hi! I'm Hung Nguyen👋. I'm a full-stack developer!
 		</Box>
@@ -60,29 +61,53 @@ const Index: React.FC<{}> = ({}) => (
 			</Text>
 		</Box>
 
-		<Box mb={6} display="flex" flexDirection="column">
+		<Stack mb={6} display="flex" flexDirection="column">
 			<Heading>Find me:</Heading>
 			<Link href="https://github.com/hungnguyen3">
-				<Button>
+				<Button
+					variant="outline"
+					color={useColorModeValue('systemLightBlue', 'systemGreen')}
+					borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
+					border="2px"
+					isFullWidth={true}
+				>
 					<Icon as={FaGithub} /> @hungnguyen3
 				</Button>
 			</Link>
 			<Link href="https://www.linkedin.com/in/hung-nguyen-se/">
-				<Button>
+				<Button
+					variant="outline"
+					color={useColorModeValue('systemLightBlue', 'systemGreen')}
+					borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
+					border="2px"
+					isFullWidth={true}
+				>
 					<Icon as={FaLinkedin} /> @hung-nguyen-se
 				</Button>
 			</Link>
 			<Link href="https://www.instagram.com/adventurous_hachi/">
-				<Button>
+				<Button
+					variant="outline"
+					color={useColorModeValue('systemLightBlue', 'systemGreen')}
+					borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
+					border="2px"
+					isFullWidth={true}
+				>
 					<Icon as={FaInstagram} /> @adventurous_hachi 💚
 				</Button>
 			</Link>
 			<Link href="https://www.instagram.com/hung_xd/">
-				<Button>
+				<Button
+					variant="outline"
+					color={useColorModeValue('systemLightBlue', 'systemGreen')}
+					borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
+					border="2px"
+					isFullWidth={true}
+				>
 					<Icon as={FaInstagram} /> @hung_xd
 				</Button>
 			</Link>
-		</Box>
+		</Stack>
 	</Layout>
 );
 

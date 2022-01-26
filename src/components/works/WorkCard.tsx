@@ -24,7 +24,7 @@ interface Props {
 // Chakra ui sample code snippet
 export const WorkCard = (props: Props) => {
 	const { work, rootProps } = props;
-	const { name, imageUrl } = work;
+	const { name, imageUrl, positionName } = work;
 
 	const startDate = `${
 		months[work.startDate.getMonth()]
@@ -48,15 +48,24 @@ export const WorkCard = (props: Props) => {
 				</AspectRatio>
 			</Box>
 			<Stack>
-				<Stack spacing="1">
+				<Stack spacing="1" align="center">
 					<Text
+						align="center"
 						fontWeight="medium"
 						color={useColorModeValue('gray.700', 'gray.400')}
 					>
 						{name}
 					</Text>
 					<Text
-						fontWeight="medium"
+						align="center"
+						fontWeight="normal"
+						color={useColorModeValue('gray.700', 'gray.400')}
+					>
+						{positionName}
+					</Text>
+					<Text
+						align="center"
+						fontWeight="normal"
 						color={useColorModeValue('gray.700', 'gray.400')}
 					>
 						({startDate} - {endDate})
@@ -64,7 +73,13 @@ export const WorkCard = (props: Props) => {
 				</Stack>
 			</Stack>
 			<Stack align="center">
-				<Button colorScheme="blue" isFullWidth>
+				<Button
+					variant="outline"
+					color={useColorModeValue('systemLightBlue', 'systemGreen')}
+					borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
+					border="2px"
+					isFullWidth={true}
+				>
 					Learn more
 				</Button>
 				<Link

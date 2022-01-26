@@ -1,4 +1,3 @@
-// chakra ui sample code snippet
 export const works = [
 	{
 		id: '1',
@@ -18,8 +17,6 @@ export const works = [
 		endDate: new Date(2021, 12 - 1),
 		imageUrl:
 			'https://neroglobal.com/wp-content/uploads/2017/06/LP_laptop_phone-900x544.png',
-		rating: 4,
-		ratingCount: 12,
 		description: '',
 	},
 	{

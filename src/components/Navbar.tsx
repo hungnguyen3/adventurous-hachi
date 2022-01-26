@@ -5,6 +5,7 @@ import {
 	Heading,
 	Link,
 	Stack,
+	useBreakpointValue,
 	useColorModeValue,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
@@ -27,6 +28,8 @@ const NavLink: React.FC<NavLinkProps> = (props): JSX.Element => {
 			<Link
 				bg={props.toggleOn ? '#dab692' : undefined}
 				color={props.toggleOn ? '#8f5b34' : undefined}
+				p={2}
+				borderRadius="md"
 			>
 				{props.children}
 			</Link>
@@ -43,7 +46,7 @@ export const Navbar: React.FC<NavbarProps> = (props): JSX.Element => {
 			as="nav"
 			w="100%"
 			zIndex={1}
-			bg={useColorModeValue('#8d9b6a', '#8a9ea7')}
+			bg={useColorModeValue('systemGreen', 'systemFoggyBlue')}
 		>
 			<Container
 				maxW="xl"
