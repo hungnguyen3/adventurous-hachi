@@ -3,8 +3,10 @@ import {
 	Button,
 	Heading,
 	Icon,
+	ListItem,
 	Stack,
 	Text,
+	UnorderedList,
 	useColorModeValue,
 } from '@chakra-ui/react';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
@@ -26,7 +28,7 @@ const Index: React.FC<{}> = ({}) => (
 
 		<Box mb={6}>
 			<Heading>Overview:</Heading>
-			<Text p={3}>
+			<Text p={2} style={{ textIndent: '20px' }}>
 				I am a full-stack developer from Vancouver, Canada. I am currently
 				pursuing a bachelor degree in Computer Engineering at the{' '}
 				<Link href="https://www.ubc.ca/">
@@ -39,75 +41,81 @@ const Index: React.FC<{}> = ({}) => (
 
 		<Box mb={6}>
 			<Heading>💼 Experience:</Heading>
-			<Text p={3}>
-				- Copperleaf Technologies Inc, Software Developer
+			<UnorderedList mt={2} ml={10}>
+				<ListItem>
+					Copperleaf Technologies Inc, Software Developer <br />
+					(Jan 2022 - August 2022)
+				</ListItem>
 				<br />
-				(Jan 2022 - August 2022)
-			</Text>
-			<Text p={3}>
-				- UBC Launch Pad, Software Developer
+				<ListItem>
+					UBC Launch Pad, Software Developer
+					<br />
+					(September 2021 - Present)
+				</ListItem>
 				<br />
-				(September 2021 - Present)
-			</Text>
-			<Text p={3}>
-				- Vecima Networks Inc, Software Quality Assurance Developer
+				<ListItem>
+					Vecima Networks Inc, Software Quality Assurance Developer
+					<br />
+					(May 2021 - Dec 2021)
+				</ListItem>
 				<br />
-				(May 2021 - Dec 2021)
-			</Text>
-			<Text p={3}>
-				- DYNE Technologies Inc, Software Developer
-				<br />
-				(May 2021 - Present)
-			</Text>
+				<ListItem>
+					DYNE Technologies Inc, Software Developer
+					<br />
+					(May 2021 - Present)
+				</ListItem>
+			</UnorderedList>
 		</Box>
 
-		<Stack mb={6} display="flex" flexDirection="column">
+		<Box>
 			<Heading>Find me:</Heading>
-			<Link href="https://github.com/hungnguyen3">
-				<Button
-					variant="outline"
-					color={useColorModeValue('systemLightBlue', 'systemGreen')}
-					borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
-					border="2px"
-					isFullWidth={true}
-				>
-					<Icon as={FaGithub} /> @hungnguyen3
-				</Button>
-			</Link>
-			<Link href="https://www.linkedin.com/in/hung-nguyen-se/">
-				<Button
-					variant="outline"
-					color={useColorModeValue('systemLightBlue', 'systemGreen')}
-					borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
-					border="2px"
-					isFullWidth={true}
-				>
-					<Icon as={FaLinkedin} /> @hung-nguyen-se
-				</Button>
-			</Link>
-			<Link href="https://www.instagram.com/adventurous_hachi/">
-				<Button
-					variant="outline"
-					color={useColorModeValue('systemLightBlue', 'systemGreen')}
-					borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
-					border="2px"
-					isFullWidth={true}
-				>
-					<Icon as={FaInstagram} /> @adventurous_hachi 💚
-				</Button>
-			</Link>
-			<Link href="https://www.instagram.com/hung_xd/">
-				<Button
-					variant="outline"
-					color={useColorModeValue('systemLightBlue', 'systemGreen')}
-					borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
-					border="2px"
-					isFullWidth={true}
-				>
-					<Icon as={FaInstagram} /> @hung_xd
-				</Button>
-			</Link>
-		</Stack>
+			<Stack mt={2} mb={6} display="flex" flexDirection="column" spacing="2">
+				<Link href="https://github.com/hungnguyen3">
+					<Button
+						variant="outline"
+						color={useColorModeValue('systemLightBlue', 'systemGreen')}
+						borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
+						border="2px"
+						isFullWidth={true}
+					>
+						<Icon as={FaGithub} /> @hungnguyen3
+					</Button>
+				</Link>
+				<Link href="https://www.linkedin.com/in/hung-nguyen-se/">
+					<Button
+						variant="outline"
+						color={useColorModeValue('systemLightBlue', 'systemGreen')}
+						borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
+						border="2px"
+						isFullWidth={true}
+					>
+						<Icon as={FaLinkedin} /> @hung-nguyen-se
+					</Button>
+				</Link>
+				<Link href="https://www.instagram.com/adventurous_hachi/">
+					<Button
+						variant="outline"
+						color={useColorModeValue('systemLightBlue', 'systemGreen')}
+						borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
+						border="2px"
+						isFullWidth={true}
+					>
+						<Icon as={FaInstagram} /> @adventurous_hachi 💚
+					</Button>
+				</Link>
+				<Link href="https://www.instagram.com/hung_xd/">
+					<Button
+						variant="outline"
+						color={useColorModeValue('systemLightBlue', 'systemGreen')}
+						borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
+						border="2px"
+						isFullWidth={true}
+					>
+						<Icon as={FaInstagram} /> @hung_xd
+					</Button>
+				</Link>
+			</Stack>
+		</Box>
 	</Layout>
 );
 
