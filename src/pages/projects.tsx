@@ -1,4 +1,4 @@
-import { Container, Heading } from '@chakra-ui/react';
+import { Container, Heading, Img } from '@chakra-ui/react';
 import { Layout } from '../components/Layout';
 import { WorkGrid } from '../components/works/WorkGrid';
 import { ProjectCard } from '../components/projects/ProjectCard';

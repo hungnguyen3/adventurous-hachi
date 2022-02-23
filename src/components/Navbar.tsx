@@ -12,10 +12,10 @@ import {
 	MenuItem,
 	MenuList,
 	Stack,
-	useBreakpointValue,
 	useColorModeValue,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 import React from 'react';
 import { DarkModeSwitch } from './DarkModeSwitch';
 
@@ -49,8 +49,10 @@ interface NavigationMenuProps {
 }
 
 const NavigationMenu: React.FC<NavigationMenuProps> = (props): JSX.Element => {
+	const router = useRouter();
+
 	return (
-		<Menu>
+		<Menu autoSelect={false}>
 			<MenuButton
 				as={IconButton}
 				aria-label="Options"
@@ -58,22 +60,22 @@ const NavigationMenu: React.FC<NavigationMenuProps> = (props): JSX.Element => {
 				variant="outline"
 			/>
 			<MenuList>
-				<MenuItem>
+				<MenuItem onClick={() => router.push('/works')}>
 					<NavLink href={'/works'} toggleOn={props.path === '/works'}>
 						Works
 					</NavLink>
 				</MenuItem>
-				<MenuItem>
+				<MenuItem onClick={() => router.push('/projects')}>
 					<NavLink href={'/projects'} toggleOn={props.path === '/projects'}>
 						Projects
 					</NavLink>
 				</MenuItem>
-				<MenuItem>
+				<MenuItem onClick={() => router.push('/posts')}>
 					<NavLink href={'/posts'} toggleOn={props.path === '/posts'}>
 						Posts
 					</NavLink>
 				</MenuItem>
-				<MenuItem>
+				<MenuItem onClick={() => router.push('/hachi')}>
 					<NavLink href={'/hachi'} toggleOn={props.path === '/hachi'}>
 						Hachi
 					</NavLink>

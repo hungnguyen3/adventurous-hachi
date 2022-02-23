@@ -1,6 +1,7 @@
 import {
 	Box,
 	Button,
+	Center,
 	Heading,
 	Icon,
 	ListItem,
@@ -27,7 +28,7 @@ const Index: React.FC<{}> = ({}) => (
 		</Box>
 
 		<Box mb={6}>
-			<Heading>Overview:</Heading>
+			<Heading>Overview</Heading>
 			<Text p={2} style={{ textIndent: '20px' }}>
 				I am a full-stack developer from Vancouver, Canada. I am currently
 				pursuing a bachelor degree in Computer Engineering at the{' '}
@@ -40,7 +41,7 @@ const Index: React.FC<{}> = ({}) => (
 		</Box>
 
 		<Box mb={6}>
-			<Heading>💼 Experience:</Heading>
+			<Heading>Experience 💼</Heading>
 			<UnorderedList mt={2} ml={10}>
 				<ListItem>
 					Copperleaf Technologies Inc, Software Developer <br />
@@ -68,53 +69,62 @@ const Index: React.FC<{}> = ({}) => (
 		</Box>
 
 		<Box>
-			<Heading>Find me:</Heading>
-			<Stack mt={2} mb={6} display="flex" flexDirection="column" spacing="2">
-				<Link href="https://github.com/hungnguyen3">
-					<Button
-						variant="outline"
-						color={useColorModeValue('systemLightBlue', 'systemGreen')}
-						borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
-						border="2px"
-						isFullWidth={true}
-					>
-						<Icon as={FaGithub} /> @hungnguyen3
-					</Button>
-				</Link>
-				<Link href="https://www.linkedin.com/in/hung-nguyen-se/">
-					<Button
-						variant="outline"
-						color={useColorModeValue('systemLightBlue', 'systemGreen')}
-						borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
-						border="2px"
-						isFullWidth={true}
-					>
-						<Icon as={FaLinkedin} /> @hung-nguyen-se
-					</Button>
-				</Link>
-				<Link href="https://www.instagram.com/adventurous_hachi/">
-					<Button
-						variant="outline"
-						color={useColorModeValue('systemLightBlue', 'systemGreen')}
-						borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
-						border="2px"
-						isFullWidth={true}
-					>
-						<Icon as={FaInstagram} /> @adventurous_hachi 💚
-					</Button>
-				</Link>
-				<Link href="https://www.instagram.com/hung_xd/">
-					<Button
-						variant="outline"
-						color={useColorModeValue('systemLightBlue', 'systemGreen')}
-						borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
-						border="2px"
-						isFullWidth={true}
-					>
-						<Icon as={FaInstagram} /> @hung_xd
-					</Button>
-				</Link>
-			</Stack>
+			<Heading>Find me</Heading>
+			<Center style={{ width: '100%' }}>
+				<Stack
+					mt={2}
+					mb={6}
+					display="flex"
+					flexDirection="column"
+					spacing="2"
+					style={{ width: '80%' }}
+				>
+					<Link href="https://github.com/hungnguyen3">
+						<Button
+							variant="outline"
+							color={useColorModeValue('systemLightBlue', 'systemGreen')}
+							borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
+							border="2px"
+							isFullWidth={true}
+						>
+							<Icon as={FaGithub} /> @hungnguyen3
+						</Button>
+					</Link>
+					<Link href="https://www.linkedin.com/in/hung-nguyen-se/">
+						<Button
+							variant="outline"
+							color={useColorModeValue('systemLightBlue', 'systemGreen')}
+							borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
+							border="2px"
+							isFullWidth={true}
+						>
+							<Icon as={FaLinkedin} /> @hung-nguyen-se
+						</Button>
+					</Link>
+					<Link href="https://www.instagram.com/adventurous_hachi/">
+						<Button
+							variant="outline"
+							color={useColorModeValue('systemLightBlue', 'systemGreen')}
+							borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
+							border="2px"
+							isFullWidth={true}
+						>
+							<Icon as={FaInstagram} /> @adventurous_hachi 💚
+						</Button>
+					</Link>
+					<Link href="https://www.instagram.com/hung_xd/">
+						<Button
+							variant="outline"
+							color={useColorModeValue('systemLightBlue', 'systemGreen')}
+							borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
+							border="2px"
+							isFullWidth={true}
+						>
+							<Icon as={FaInstagram} /> @hung_xd
+						</Button>
+					</Link>
+				</Stack>
+			</Center>
 		</Box>
 	</Layout>
 );

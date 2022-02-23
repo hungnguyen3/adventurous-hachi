@@ -3,7 +3,7 @@ import {
 	Box,
 	Button,
 	HStack,
-	Image,
+	Img,
 	Link,
 	Skeleton,
 	Stack,
@@ -40,7 +40,7 @@ export const WorkCard = (props: Props) => {
 				<Link>
 					<Box position="relative">
 						<AspectRatio ratio={4 / 3}>
-							<Image
+							<Img
 								src={imageUrl}
 								alt={name}
 								draggable="false"
@@ -54,7 +54,7 @@ export const WorkCard = (props: Props) => {
 			<Stack spacing="1" align="center">
 				<Text
 					align="center"
-					fontWeight="medium"
+					fontWeight="bold"
 					color={useColorModeValue('gray.700', 'gray.400')}
 				>
 					{name}

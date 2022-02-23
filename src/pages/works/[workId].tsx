@@ -45,7 +45,7 @@ const Work = ({}) => {
 				<Box mt={8}>
 					<Box>
 						<Heading as="h4" size="md">
-							About:
+							About
 						</Heading>
 						<Text style={{ textIndent: '20px' }}>
 							{currentWork?.description}
@@ -54,7 +54,7 @@ const Work = ({}) => {
 
 					<Box mt={8}>
 						<Heading as="h4" size="md">
-							Duties:
+							Duties
 						</Heading>
 						<UnorderedList ml={10}>
 							{currentWork?.duties.map((duty: String, index: number) => (
@@ -65,7 +65,7 @@ const Work = ({}) => {
 
 					<Box mt={8}>
 						<Heading as="h4" size="md">
-							Tech stack:
+							Tech stack
 						</Heading>
 						<UnorderedList ml={10}>
 							{currentWork?.techStack.map((tech: String, index: number) => (

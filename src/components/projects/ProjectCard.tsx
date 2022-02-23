@@ -4,7 +4,7 @@ import {
 	Button,
 	HStack,
 	Icon,
-	Image,
+	Img,
 	Link,
 	Skeleton,
 	Stack,
@@ -14,7 +14,7 @@ import {
 	useColorModeValue,
 } from '@chakra-ui/react';
 import * as React from 'react';
-import { FaGithub, FaInfoCircle } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaInfoCircle } from 'react-icons/fa';
 import { Project } from './_data';
 
 interface Props {
@@ -25,13 +25,13 @@ interface Props {
 // Chakra ui sample code snippet
 export const ProjectCard = (props: Props) => {
 	const { project, rootProps } = props;
-	const { name, imageUrl, description, sourceCode } = project;
+	const { name, imageUrl, description, sourceCode, demo } = project;
 
 	return (
 		<Stack spacing={useBreakpointValue({ base: '4', md: '5' })} {...rootProps}>
 			<Box position="relative">
 				<AspectRatio ratio={4 / 3}>
-					<Image
+					<Img
 						src={imageUrl}
 						alt={name}
 						draggable="false"
@@ -40,13 +40,32 @@ export const ProjectCard = (props: Props) => {
 					/>
 				</AspectRatio>
 			</Box>
+
 			<Stack spacing="1" align="center">
-				<Text
-					fontWeight="medium"
-					color={useColorModeValue('gray.700', 'gray.400')}
-				>
-					{name}
-				</Text>
+				<HStack align="center">
+					<Text
+						fontWeight="bold"
+						color={useColorModeValue('gray.700', 'gray.400')}
+					>
+						{name}
+					</Text>
+
+					{demo ? (
+						<Link href={demo}>
+							<Box as="button">
+								<Icon as={FaExternalLinkAlt} />
+							</Box>
+						</Link>
+					) : null}
+
+					{sourceCode ? (
+						<Link href={sourceCode}>
+							<Box as="button">
+								<Icon as={FaGithub} />
+							</Box>
+						</Link>
+					) : null}
+				</HStack>
 				<Text
 					align="center"
 					fontWeight="normal"
@@ -55,31 +74,6 @@ export const ProjectCard = (props: Props) => {
 					{description}
 				</Text>
 			</Stack>
-			{/* <Stack align="center">
-				<Button
-					variant="outline"
-					color={useColorModeValue('systemLightBlue', 'systemGreen')}
-					borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
-					border="2px"
-					isFullWidth={true}
-				>
-					<Icon as={FaInfoCircle} />
-					Learn more
-				</Button>
-
-				<Link href={sourceCode}>
-					<Button
-						variant="outline"
-						color={useColorModeValue('systemLightBlue', 'systemGreen')}
-						borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
-						border="2px"
-						isFullWidth={true}
-					>
-						<Icon as={FaGithub} />
-						View Code
-					</Button>
-				</Link>
-			</Stack> */}
 		</Stack>
 	);
 };

@@ -11,19 +11,10 @@ export const works = [
 			'Copperleaf works with asset-intensive companies to redefine asset management planning and provide decision analytics for critical infrastructure.',
 		website: 'https://www.copperleaf.com/',
 		duties: [
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+			'Develop new features in Angular to showcase breakdowns of costs, spending, and assets for end-users.',
+			'Develop new features in Angular to help users automate investment workflows',
 		],
-		techStack: [
-			'Angular',
-			'Typescript',
-			'C#',
-			'.NET',
-			'SQL',
-			'Oracle',
-			'PostgreSQL',
-		],
+		techStack: ['Angular', 'Typescript', 'SCSS', 'C#', '.NET', 'SQL', 'Oracle'],
 	},
 	{
 		id: '1',
@@ -31,15 +22,15 @@ export const works = [
 		positionName: 'Software Quality Developer',
 		startDate: new Date(2021, 5 - 1),
 		endDate: new Date(2021, 12 - 1),
-		imageUrl:
-			'https://neroglobal.com/wp-content/uploads/2017/06/LP_laptop_phone-900x544.png',
+		imageUrl: '/works/Nero.png',
 		description:
 			"Nero Global's secure GPS fleet tracking management software for mobile service vehicles will reduce your costs and increase productivity.",
 		website: 'https://neroglobal.com/',
 		duties: [
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+			'Performed manual and automated tests on software and hardware products.',
+			'Developed test plans and wrote test suites in Javascript and Sahi software throughout the Agile development cycle.',
+			'Reduced errors and failures of the existing test scripts up to 90 percent.',
+			'Executed automated test scripts and reported bugs and errors upon daily staging updates and bi-weekly production updates.',
 		],
 		techStack: ['Sahi - test automation software', 'Javascript'],
 	},
@@ -54,9 +45,8 @@ export const works = [
 			'DYNE is a user-based application aimed to help you connect with people from your community over food. Meet old friends, make new ones, or grow your network with us.',
 		website: 'https://dyneapp.ca',
 		duties: [
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+			'Worked in React (Next.js) to develop a managing dashboard web app for restaurants to monitor meetup details, coupons, promotion creations, etc.',
+			'Developed and fixed backend endpoints using Node.js, Express.js, and MongoDB.',
 		],
 		techStack: [
 			'React (Next.js)',
@@ -77,9 +67,7 @@ export const works = [
 			'A leading student-run software club based in the University of British Columbia devoted to building applications in a collaborative and professional environment.',
 		website: 'https://ubclaunchpad.com/',
 		duties: [
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+			'Develop a Node.js backend server for a project called Euphony to communicate with front-end app, web services, and machine learning server.',
 		],
 		techStack: ['Node.js', 'Typescript', 'React Native', 'Web services'],
 	},
