@@ -2,7 +2,7 @@ export const projects = [
 	{
 		id: '1',
 		name: 'What The Fridge',
-		imageUrl: '/projects/What-The-Fridge.jpg',
+		imageUrl: '/projects/What-The-Fridge.png',
 		description: 'Solution to tracking grocery items',
 		languages: ['TypeScript', 'SQL'],
 		tools: ['Next.js', 'Node.js', 'GraphQL', 'PostgreSQL'],
@@ -42,7 +42,7 @@ export const projects = [
 	{
 		id: '4',
 		name: 'Lost Pets Finder',
-		imageUrl: '/projects/Lost-Pet-Finder.jpg',
+		imageUrl: '/projects/Lost-Pet-Finder.png',
 		description: 'An android app that connects people with their lost pets',
 		languages: ['JavaScript'],
 		tools: [
@@ -70,7 +70,7 @@ export const projects = [
 	{
 		id: '6',
 		name: 'Dancing Robot',
-		imageUrl: '/projects/Dancing-Robot.jpg',
+		imageUrl: '/projects/Dancing-Robot.png',
 		description: 'A dancing robot, capable of switching between 6 dance moves',
 		languages: ['Python'],
 		tools: [
@@ -86,7 +86,7 @@ export const projects = [
 	{
 		id: '7',
 		name: 'Line Tracking Robot',
-		imageUrl: '/projects/Line-Tracking-Robot.jpg',
+		imageUrl: '/projects/Line-Tracking-Robot.png',
 		description: 'An autonomous robotic vehicle',
 		languages: ['Python'],
 		tools: [
@@ -102,7 +102,7 @@ export const projects = [
 	{
 		id: '8',
 		name: 'Finding Cherries',
-		imageUrl: '/projects/Finding-Cherries.jpg',
+		imageUrl: '/projects/Finding-Cherries.png',
 		description: 'A 2D game with classic Mario style',
 		languages: ['C#'],
 		tools: ['Unity', 'Adobe Photoshop'],
