@@ -110,11 +110,13 @@ export const Navbar: React.FC<NavbarProps> = (props): JSX.Element => {
 				zIndex={1}
 			>
 				<Flex align="center" mr={5}>
-					<Link href="/">
-						<Heading as="h1" size="md">
-							Hung Nguyen
-						</Heading>
-					</Link>
+					<NextLink href={'/'} passHref>
+						<Link href="/">
+							<Heading as="h1" size="md">
+								Hung Nguyen
+							</Heading>
+						</Link>
+					</NextLink>
 				</Flex>
 
 				<Stack
