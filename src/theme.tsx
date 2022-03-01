@@ -21,8 +21,10 @@ const styles = {
 const colors = {
 	black: '#16161D',
 	systemGreen: '#8d9b6a',
+	systemBrown: '#8f5b34',
 	systemFoggyBlue: '#8a9ea7',
 	systemLightBlue: '#4299E1',
+	systemLightBrown: '#c4a484',
 };
 
 // 2. Add your color mode config

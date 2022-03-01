@@ -32,14 +32,18 @@ interface NavLinkProps {
 const NavLink: React.FC<NavLinkProps> = (props): JSX.Element => {
 	return (
 		<NextLink href={props.href} passHref>
-			<Link
-				bg={props.toggleOn ? '#dab692' : undefined}
-				color={props.toggleOn ? '#8f5b34' : undefined}
+			<Box
+				as="button"
+				bg={props.toggleOn ? 'systemLightBrown' : undefined}
+				color={props.toggleOn ? 'systemBrown' : undefined}
 				p={2}
 				borderRadius="md"
+				// border={props.toggleOn ? '1px' : null}
+				// borderColor={props.toggleOn ? 'systemBrown' : null}
+				boxShadow={props.toggleOn ? 'lg' : null}
 			>
 				{props.children}
-			</Link>
+			</Box>
 		</NextLink>
 	);
 };
