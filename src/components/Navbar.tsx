@@ -1,6 +1,7 @@
 import { HamburgerIcon } from '@chakra-ui/icons';
 import {
 	Box,
+	Center,
 	Container,
 	Flex,
 	Heading,
@@ -32,8 +33,7 @@ interface NavLinkProps {
 const NavLink: React.FC<NavLinkProps> = (props): JSX.Element => {
 	return (
 		<NextLink href={props.href} passHref>
-			<Box
-				as="button"
+			<Link
 				bg={props.toggleOn ? 'systemLightBrown' : undefined}
 				color={props.toggleOn ? 'systemBrown' : undefined}
 				p={2}
@@ -43,7 +43,7 @@ const NavLink: React.FC<NavLinkProps> = (props): JSX.Element => {
 				boxShadow={props.toggleOn ? 'lg' : null}
 			>
 				{props.children}
-			</Box>
+			</Link>
 		</NextLink>
 	);
 };
@@ -74,7 +74,7 @@ const NavigationMenu: React.FC<NavigationMenuProps> = (props): JSX.Element => {
 						Projects
 					</NavLink>
 				</MenuItem>
-				<MenuItem onClick={() => router.push('/posts')}>
+				{/* <MenuItem onClick={() => router.push('/posts')}>
 					<NavLink href={'/posts'} toggleOn={props.path === '/posts'}>
 						Posts
 					</NavLink>
@@ -83,7 +83,7 @@ const NavigationMenu: React.FC<NavigationMenuProps> = (props): JSX.Element => {
 					<NavLink href={'/hachi'} toggleOn={props.path === '/hachi'}>
 						Hachi
 					</NavLink>
-				</MenuItem>
+				</MenuItem> */}
 				<MenuDivider />
 				<MenuItem>
 					<DarkModeSwitch />
@@ -124,10 +124,11 @@ export const Navbar: React.FC<NavbarProps> = (props): JSX.Element => {
 				</Flex>
 
 				<Stack
-					direction={{ base: 'column', md: 'row' }}
+					direction="row"
 					display={{ base: 'none', md: 'flex' }}
+					width={{ base: 'full', md: 'auto' }}
 					spacing="20px"
-					alignItems="center"
+					flexGrow={1}
 				>
 					<NavLink href={'/works'} toggleOn={props.path === '/works'}>
 						Works
@@ -135,20 +136,22 @@ export const Navbar: React.FC<NavbarProps> = (props): JSX.Element => {
 					<NavLink href={'/projects'} toggleOn={props.path === '/projects'}>
 						Projects
 					</NavLink>
-					<NavLink href={'/posts'} toggleOn={props.path === '/posts'}>
+					{/* <NavLink href={'/posts'} toggleOn={props.path === '/posts'}>
 						Posts
 					</NavLink>
 					<NavLink href={'/hachi'} toggleOn={props.path === '/hachi'}>
 						Hachi
-					</NavLink>
-					<DarkModeSwitch />
+					</NavLink> */}
 				</Stack>
 
-				<Box flex={1} align="right">
+				<Box flex={{ base: 1, md: 0 }} align="right">
 					<Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
 						<NavigationMenu path={props.path} />
 					</Box>
 				</Box>
+				<Center display={{ base: 'none', md: 'flex' }}>
+					<DarkModeSwitch />
+				</Center>
 			</Container>
 		</Box>
 	);

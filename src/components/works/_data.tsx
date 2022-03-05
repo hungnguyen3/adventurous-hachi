@@ -12,7 +12,7 @@ export const works = [
 		website: 'https://www.copperleaf.com/',
 		duties: [
 			'Develop new features in Angular to showcase breakdowns of costs, spending, and assets for end-users.',
-			'Develop new features in Angular to help users automate investment workflows',
+			'Develop new features in Angular to help users automate investment workflows.',
 		],
 		techStack: ['Angular', 'Typescript', 'SCSS', 'C#', '.NET', 'SQL', 'Oracle'],
 	},
