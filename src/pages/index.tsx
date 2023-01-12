@@ -11,6 +11,7 @@ import {
 	useColorModeValue,
 } from '@chakra-ui/react';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { AiFillMail } from 'react-icons/ai';
 import Link from 'next/link';
 import { Layout } from '../components/Layout';
 
@@ -33,10 +34,15 @@ const Index: React.FC<{}> = ({}) => (
 				I am a full-stack developer from Vancouver, Canada. I am currently
 				pursuing a bachelor degree in Computer Engineering at the{' '}
 				<Link href="https://www.ubc.ca/">
-					<Text as="i">University of British Columbia🎓. </Text>
-				</Link>
+					<Text as="i">
+						University of British Columbia🎓(expected to graduate in May 2023).{' '}
+					</Text>
+				</Link>{' '}
 				I am passionate about designing and building software applications to
 				solve real-life problems.
+			</Text>
+			<Text p={2} as="b">
+				I'm actively looking for a full-time position starting May 2023.
 			</Text>
 		</Box>
 
@@ -63,7 +69,7 @@ const Index: React.FC<{}> = ({}) => (
 				<ListItem>
 					DYNE Technologies Inc, Software Developer
 					<br />
-					(May 2021 - Present)
+					(May 2021 - Feb 2022)
 				</ListItem>
 			</UnorderedList>
 		</Box>
@@ -79,6 +85,17 @@ const Index: React.FC<{}> = ({}) => (
 					spacing="2"
 					style={{ width: '80%' }}
 				>
+					<Link href="mailto:hunglnl01@gmail.com">
+						<Button
+							variant="outline"
+							color={useColorModeValue('systemLightBlue', 'systemGreen')}
+							borderColor={useColorModeValue('systemLightBlue', 'systemGreen')}
+							border="2px"
+							isFullWidth={true}
+						>
+							<Icon as={AiFillMail} /> hunglnl01@gmail.com
+						</Button>
+					</Link>
 					<Link href="https://github.com/hungnguyen3">
 						<Button
 							variant="outline"
@@ -87,7 +104,7 @@ const Index: React.FC<{}> = ({}) => (
 							border="2px"
 							isFullWidth={true}
 						>
-							<Icon as={FaGithub} /> @hungnguyen3
+							<Icon as={FaGithub} /> hungnguyen3
 						</Button>
 					</Link>
 					<Link href="https://www.linkedin.com/in/hung-nguyen-se/">
@@ -98,7 +115,7 @@ const Index: React.FC<{}> = ({}) => (
 							border="2px"
 							isFullWidth={true}
 						>
-							<Icon as={FaLinkedin} /> @hung-nguyen-se
+							<Icon as={FaLinkedin} /> hung-nguyen-se
 						</Button>
 					</Link>
 					<Link href="https://www.instagram.com/adventurous_hachi/">
@@ -109,7 +126,7 @@ const Index: React.FC<{}> = ({}) => (
 							border="2px"
 							isFullWidth={true}
 						>
-							<Icon as={FaInstagram} /> @adventurous_hachi 💚
+							<Icon as={FaInstagram} /> adventurous_hachi 💚
 						</Button>
 					</Link>
 					<Link href="https://www.instagram.com/hung_xd/">
@@ -120,7 +137,7 @@ const Index: React.FC<{}> = ({}) => (
 							border="2px"
 							isFullWidth={true}
 						>
-							<Icon as={FaInstagram} /> @hung_xd
+							<Icon as={FaInstagram} /> hung_xd
 						</Button>
 					</Link>
 				</Stack>

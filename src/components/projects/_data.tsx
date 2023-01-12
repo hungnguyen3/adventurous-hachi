@@ -17,6 +17,7 @@ export const projects = [
 		languages: ['TypeScript', 'Python'],
 		tools: ['React Native', 'Node.js', 'Machine Learning'],
 		sourceCode: 'https://github.com/ubclaunchpad/spotify-gen',
+		demo: 'https://www.youtube.com/watch?v=78rMSg4dj6I',
 	},
 	{
 		id: '3',
