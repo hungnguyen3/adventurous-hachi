@@ -3,7 +3,7 @@ import { useColorMode, Box, Button } from '@chakra-ui/react';
 
 export const DarkModeSwitch: React.FC<{}> = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
-	const isDark = colorMode === 'light';
+	const isDark = colorMode === 'dark';
 
 	return (
 		<Box>
