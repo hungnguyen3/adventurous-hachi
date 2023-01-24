@@ -35,47 +35,59 @@ export const WorkCard = (props: Props) => {
 		: 'Present';
 
 	return (
-		<Stack spacing={useBreakpointValue({ base: '4', md: '5' })} {...rootProps}>
-			<NextLink href={`/works/${id}`} passHref>
-				<Link>
-					<Box position="relative">
-						<AspectRatio ratio={4 / 3}>
-							<Img
-								src={imageUrl}
-								alt={name}
-								draggable="false"
-								fallback={<Skeleton />}
-								borderRadius={useBreakpointValue({ base: 'md', md: 'xl' })}
-							/>
-						</AspectRatio>
-					</Box>
-				</Link>
-			</NextLink>
-			<Stack spacing="1" align="center">
-				<Text
-					align="center"
-					fontWeight="bold"
-					color={useColorModeValue('gray.700', 'gray.400')}
-				>
-					{name}
-				</Text>
-				<Text
-					align="center"
-					fontWeight="normal"
-					color={useColorModeValue('gray.700', 'gray.400')}
-				>
-					{positionName}
-				</Text>
-				<Text
-					align="center"
-					fontWeight="normal"
-					color={useColorModeValue('gray.700', 'gray.400')}
-				>
-					({startDate} - {endDate})
-				</Text>
-			</Stack>
+		<Box
+			borderWidth="1px"
+			borderColor={useColorModeValue('systemGreen', 'systemLightBlue')}
+			borderRadius={useBreakpointValue({ base: 'md', md: 'xl' })}
+		>
+			<Stack
+				boxShadow="2xl"
+				spacing={useBreakpointValue({ base: '4', md: '5' })}
+				borderRadius={useBreakpointValue({ base: 'md', md: 'xl' })}
+				p={2}
+				h={'100%'}
+				{...rootProps}
+			>
+				<NextLink href={`/works/${id}`} passHref>
+					<Link>
+						<Box position="relative">
+							<AspectRatio ratio={4 / 3}>
+								<Img
+									src={imageUrl}
+									alt={name}
+									draggable="false"
+									fallback={<Skeleton />}
+									borderRadius={useBreakpointValue({ base: 'md', md: 'xl' })}
+								/>
+							</AspectRatio>
+						</Box>
+					</Link>
+				</NextLink>
+				<Stack spacing="1" align="center">
+					<Text
+						align="center"
+						fontWeight="bold"
+						color={useColorModeValue('gray.700', 'gray.400')}
+					>
+						{name}
+					</Text>
+					<Text
+						align="center"
+						fontWeight="normal"
+						color={useColorModeValue('gray.700', 'gray.400')}
+					>
+						{positionName}
+					</Text>
+					<Text
+						align="center"
+						fontWeight="normal"
+						color={useColorModeValue('gray.700', 'gray.400')}
+					>
+						({startDate} - {endDate})
+					</Text>
+				</Stack>
 
-			{/* <Stack align="center">
+				{/* <Stack align="center">
 				<Button
 					variant="outline"
 					color={useColorModeValue('systemLightBlue', 'systemGreen')}
@@ -93,6 +105,7 @@ export const WorkCard = (props: Props) => {
 					Website
 				</Link>
 			</Stack> */}
-		</Stack>
+			</Stack>
+		</Box>
 	);
 };
