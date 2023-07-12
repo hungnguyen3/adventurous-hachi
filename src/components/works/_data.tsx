@@ -1,12 +1,23 @@
 export const works = [
 	{
 		id: '0',
+		name: 'SAP Software Solutions',
+		positionName: 'Software Engineer Intern',
+		startDate: new Date(2023, 8 - 1),
+		endDate: new Date(2024, 4 - 1),
+		imageUrl: '/works/SAP.png',
+		description: 'SAP is a multinational software corporation specializing in enterprise software and services.',
+		website: 'https://www.concur.ca/',
+		duties: ['N/A'],
+		techStack: ['N/A'],
+	},
+	{
+		id: '1',
 		name: 'Copperleaf Technologies Inc',
-		positionName: 'Software Developer',
+		positionName: 'Software Engineer Intern',
 		startDate: new Date(2022, 1 - 1),
 		endDate: new Date(2022, 8 - 1),
-		imageUrl:
-			'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/kmu112bbotnbapfd3z7m',
+		imageUrl: '/works/Copperleaf.png',
 		description:
 			'Copperleaf works with asset-intensive companies to redefine asset management planning and provide decision analytics for critical infrastructure.',
 		website: 'https://www.copperleaf.com/',
@@ -23,11 +34,30 @@ export const works = [
 		techStack: ['Angular', 'Typescript', 'SCSS', 'C#', '.NET', 'SQL', 'Oracle'],
 	},
 	{
-		id: '1',
-		name: 'Vecima Networks Inc',
-		positionName: 'Software Quality Developer',
-		startDate: new Date(2021, 5 - 1),
+		id: '2',
+		name: 'Dyne Technologies Inc',
+		positionName: 'Software Engineer Intern',
+		startDate: new Date(2021, 9 - 1),
 		endDate: new Date(2021, 12 - 1),
+		imageUrl: '/works/Dyne.png',
+		description:
+			'DYNE is a user-based application aimed to help you connect with people from your community over food. Meet old friends, make new ones, or grow your network with us.',
+		website: 'https://dyneapp.ca',
+		duties: [
+			'Productionized a managing dashboard web app in React for restaurants to monitor meetups, coupons, promotions, etc.',
+			'Built, revamped, and added new features to the web dashboard through several quality assurance iterations.',
+			'Developed and fixed back-end services using Node.js, Express.js, and MongoDB.',
+			'Designed and implemented endpoints to analyze restaurants’ data from MongoDB for front-end visualization.',
+			'Maintained and fixed existing endpoints based on bugs/needs reported from the QA team or end users.',
+		],
+		techStack: ['React (Next.js)', 'Javascript', 'Node.js', 'MongoDB', 'Web services'],
+	},
+	{
+		id: '3',
+		name: 'Vecima Networks Inc',
+		positionName: 'Software QA Engineer Intern',
+		startDate: new Date(2021, 5 - 1),
+		endDate: new Date(2021, 8 - 1),
 		imageUrl: '/works/Nero.png',
 		description:
 			"Nero Global's secure GPS fleet tracking management software for mobile service vehicles will reduce your costs and increase productivity.",
@@ -41,37 +71,12 @@ export const works = [
 		techStack: ['Sahi - test automation software', 'Javascript'],
 	},
 	{
-		id: '2',
-		name: 'Dyne Technologies Inc',
-		positionName: 'Software Developer',
-		startDate: new Date(2021, 5 - 1),
-		endDate: new Date(2022, 2 - 1),
-		imageUrl: 'https://dyneapp.files.wordpress.com/2021/09/frame-7167.png',
-		description:
-			'DYNE is a user-based application aimed to help you connect with people from your community over food. Meet old friends, make new ones, or grow your network with us.',
-		website: 'https://dyneapp.ca',
-		duties: [
-			'Productionized a managing dashboard web app in React for restaurants to monitor meetups, coupons, promotions, etc.',
-			'Built, revamped, and added new features to the web dashboard through several quality assurance iterations.',
-			'Developed and fixed back-end services using Node.js, Express.js, and MongoDB.',
-			'Designed and implemented endpoints to analyze restaurants’ data from MongoDB for front-end visualization.',
-			'Maintained and fixed existing endpoints based on bugs/needs reported from the QA team or end users.',
-		],
-		techStack: [
-			'React (Next.js)',
-			'Javascript',
-			'Node.js',
-			'MongoDB',
-			'Web services',
-		],
-	},
-	{
-		id: '3',
+		id: '4',
 		name: 'UBC Launch Pad',
-		positionName: 'Software Developer',
+		positionName: 'Software Engineer Intern',
 		startDate: new Date(2021, 9 - 1),
-		endDate: null,
-		imageUrl: 'https://ubclaunchpad.com/img/landing.77f06a83.png',
+		endDate: new Date(2023, 4 - 1),
+		imageUrl: '/works/LaunchPad.png',
 		description:
 			'A leading student-run software club based in the University of British Columbia devoted to building applications in a collaborative and professional environment.',
 		website: 'https://ubclaunchpad.com/',
@@ -84,7 +89,8 @@ export const works = [
 	},
 ];
 
-export type ElementType<T extends ReadonlyArray<unknown>> =
-	T extends ReadonlyArray<infer ElementType> ? ElementType : never;
+export type ElementType<T extends ReadonlyArray<unknown>> = T extends ReadonlyArray<infer ElementType>
+	? ElementType
+	: never;
 
 export type Work = ElementType<typeof works>;

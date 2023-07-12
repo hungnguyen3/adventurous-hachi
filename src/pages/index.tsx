@@ -31,18 +31,15 @@ const Index: React.FC<{}> = ({}) => (
 		<Box mb={6}>
 			<Heading>Overview</Heading>
 			<Text p={2} style={{ textIndent: '20px' }}>
-				I am a full-stack developer from Vancouver, Canada. I am currently
-				pursuing a bachelor degree in Computer Engineering at the{' '}
+				I am a full-stack developer from Vancouver, Canada. I graduated with a bachelor's degree in Computer
+				Engineering at the{' '}
 				<Link href="https://www.ubc.ca/">
-					<Text as="i">
-						University of British Columbia🎓(expected to graduate in May 2023).{' '}
-					</Text>
+					<Text as="i">University of British Columbia🎓. </Text>
 				</Link>{' '}
-				I am passionate about designing and building software applications to
-				solve real-life problems.
+				I am passionate about designing and building software applications to solve real-life problems.
 			</Text>
 			<Text p={2} as="b">
-				I'm actively looking for a full-time position starting May 2023.
+				I'm actively looking for a full-time position starting May 2024.
 			</Text>
 		</Box>
 
@@ -50,26 +47,33 @@ const Index: React.FC<{}> = ({}) => (
 			<Heading>Experience 💼</Heading>
 			<UnorderedList mt={2} ml={10}>
 				<ListItem>
-					Copperleaf Technologies Inc, Software Developer <br />
-					(Jan 2022 - August 2022)
+					SAP Software Solutions, Software Engineer Intern
+					<br />
+					(Sept 2023 - April 2024)
 				</ListItem>
 				<br />
 				<ListItem>
-					UBC Launch Pad, Software Developer
+					Copperleaf Technologies Inc, Software Engineer Intern
 					<br />
-					(September 2021 - Present)
+					(Jan 2022 - Aug 2022)
 				</ListItem>
 				<br />
 				<ListItem>
-					Vecima Networks Inc, Software Quality Assurance Developer
+					DYNE Technologies Inc, Software Engineer Intern
 					<br />
-					(May 2021 - Dec 2021)
+					(Aug 2021 - Dec 2021)
 				</ListItem>
 				<br />
 				<ListItem>
-					DYNE Technologies Inc, Software Developer
+					Vecima Networks Inc, Software QA Engineer Intern
 					<br />
-					(May 2021 - Feb 2022)
+					(May 2021 - Aug 2021)
+				</ListItem>
+				<br />
+				<ListItem>
+					UBC Launch Pad, Software Engineer Intern
+					<br />
+					(Sept 2021 - May 2023)
 				</ListItem>
 			</UnorderedList>
 		</Box>
@@ -77,14 +81,7 @@ const Index: React.FC<{}> = ({}) => (
 		<Box>
 			<Heading>Find me</Heading>
 			<Center style={{ width: '100%' }}>
-				<Stack
-					mt={2}
-					mb={6}
-					display="flex"
-					flexDirection="column"
-					spacing="2"
-					style={{ width: '80%' }}
-				>
+				<Stack mt={2} mb={6} display="flex" flexDirection="column" spacing="2" style={{ width: '80%' }}>
 					<Link href="mailto:hunglnl01@gmail.com">
 						<Button
 							variant="outline"
