@@ -1,10 +1,21 @@
 export const projects = [
 	{
+		id: '10',
+		name: 'Giffy',
+		imageUrl: '/projects/Giffy.gif',
+		description: 'share favorite memes and stickers from your phone keyboard',
+		languages: ['Java', 'TypeScript', 'SQL'],
+		tools: ['Next.js', 'Spring Boot', 'PostgreSQL', 'AWS'],
+		sourceCode: 'https://github.com/hungnguyen3/Giffy',
+		date: new Date(2023, 5 - 1),
+		type: ['Software'],
+		rating: 9,
+	},
+	{
 		id: '9',
 		name: 'Career Roaster',
 		imageUrl: '/projects/Career-Roaster.png',
-		description:
-			'Showcasing your professional skills and receiving constructive feedback',
+		description: 'Showcasing your professional skills and receiving constructive feedback',
 		languages: ['TypeScript', 'SQL'],
 		tools: ['Next.js', 'Node.js', 'PostgreSQL', 'Firebase', 'ChakraUI'],
 		sourceCode: 'https://github.com/hungnguyen3/nwHacks2023',
@@ -68,16 +79,7 @@ export const projects = [
 		imageUrl: '/projects/Lost-Pet-Finder.png',
 		description: 'An android app that connects people with their lost pets',
 		languages: ['JavaScript'],
-		tools: [
-			'React Native',
-			'Node.js',
-			'MySQL',
-			'AWS',
-			'Firebase',
-			'Jest',
-			'Codacy',
-			'Travis CI',
-		],
+		tools: ['React Native', 'Node.js', 'MySQL', 'AWS', 'Firebase', 'Jest', 'Codacy', 'Travis CI'],
 		sourceCode: 'https://github.com/Lost-Pet-Finder/Lost-Pet-Finder',
 		date: new Date(2020, 12 - 1),
 		type: ['Software', 'MachineLearning'],
@@ -87,8 +89,7 @@ export const projects = [
 		id: '4',
 		name: 'SMS School',
 		imageUrl: '/projects/SMS-School.png',
-		description:
-			'An online education system for children in developing countries',
+		description: 'An online education system for children in developing countries',
 		languages: ['TypeScript'],
 		tools: ['React', 'Node.js', 'MongoDB', 'Twilio API', 'Bootstrap'],
 		sourceCode: 'https://github.com/hungnguyen3/nwHacks',
@@ -102,13 +103,7 @@ export const projects = [
 		imageUrl: '/projects/Dancing-Robot.png',
 		description: 'A dancing robot, capable of switching between 6 dance moves',
 		languages: ['Python'],
-		tools: [
-			'Raspberry Pi 4',
-			'Servomotors',
-			'LCD screen',
-			'Piezzo buzzer',
-			'RGB lights',
-		],
+		tools: ['Raspberry Pi 4', 'Servomotors', 'LCD screen', 'Piezzo buzzer', 'RGB lights'],
 		sourceCode: '',
 		demo: 'https://www.youtube.com/watch?v=zXgueicf6Qo',
 		date: new Date(2019, 12 - 1),
@@ -121,13 +116,7 @@ export const projects = [
 		imageUrl: '/projects/Line-Tracking-Robot.png',
 		description: 'An autonomous robotic vehicle',
 		languages: ['Python'],
-		tools: [
-			'Raspberry Pi 4',
-			'Servomotors',
-			'LCD screen',
-			'distance sensors',
-			'RP4 camera',
-		],
+		tools: ['Raspberry Pi 4', 'Servomotors', 'LCD screen', 'distance sensors', 'RP4 camera'],
 		sourceCode: '',
 		demo: 'https://www.youtube.com/watch?v=RC4f2ZNXzzs&t=6s/&ab_channel=HungNguyen',
 		date: new Date(2020, 3 - 1),
@@ -149,7 +138,8 @@ export const projects = [
 	},
 ];
 
-export type ElementType<T extends ReadonlyArray<unknown>> =
-	T extends ReadonlyArray<infer ElementType> ? ElementType : never;
+export type ElementType<T extends ReadonlyArray<unknown>> = T extends ReadonlyArray<infer ElementType>
+	? ElementType
+	: never;
 
 export type Project = ElementType<typeof projects>;
