@@ -1,8 +1,6 @@
 import {
 	AspectRatio,
 	Box,
-	Button,
-	HStack,
 	Img,
 	Link,
 	Skeleton,

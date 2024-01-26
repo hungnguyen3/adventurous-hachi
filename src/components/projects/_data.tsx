@@ -1,9 +1,21 @@
 export const projects = [
 	{
+		id: '11',
+		name: 'Mobimon',
+		imageUrl: '/projects/Mobimon.png',
+		description: "Help caregivers monitor patients' mobility metrics remotely",
+		languages: ['Java', 'TypeScript', 'Swift'],
+		tools: ['AWS', 'Maven', 'XCode'],
+		sourceCode: 'https://github.com/UBC-CIC/remote-mobility-monitoring',
+		date: new Date(2023, 6 - 1),
+		type: ['Software'],
+		rating: 9,
+	},
+	{
 		id: '10',
 		name: 'Giffy',
 		imageUrl: '/projects/Giffy.gif',
-		description: 'share favorite memes and stickers from your phone keyboard',
+		description: 'Share favorite memes and stickers from your phone keyboard',
 		languages: ['Java', 'TypeScript', 'SQL'],
 		tools: ['Next.js', 'Spring Boot', 'PostgreSQL', 'AWS'],
 		sourceCode: 'https://github.com/hungnguyen3/Giffy',

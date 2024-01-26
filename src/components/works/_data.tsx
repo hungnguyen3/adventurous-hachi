@@ -8,8 +8,13 @@ export const works = [
 		imageUrl: '/works/SAP.png',
 		description: 'SAP is a multinational software corporation specializing in enterprise software and services.',
 		website: 'https://www.concur.ca/',
-		duties: ['N/A'],
-		techStack: ['N/A'],
+		duties: [
+      'Engineered full-stack services for the SAP Concur App Center and Homepage, supporting 66 million global users',
+      'Added steps in Shell and Python to CI/CD pipelines to build, tag and promote container images through AWS',
+      'Updated Helm Charts for K8s clusters to add antivirus and integration test sidecars ensuring system reliability',
+      'Enhanced deployment and monitoring by reducing CI steps, dependencies, and adding in-depth logging'
+    ],
+		techStack: ['Go', 'AWS', 'K8s', 'Bash', 'Docker', 'Helm', 'Kibana', 'React'],
 	},
 	{
 		id: '1',
@@ -22,16 +27,12 @@ export const works = [
 			'Copperleaf works with asset-intensive companies to redefine asset management planning and provide decision analytics for critical infrastructure.',
 		website: 'https://www.copperleaf.com/',
 		duties: [
-			'Developed new features in Angular to showcase breakdowns of costs, spending, and assets for end-users.',
-			'Built a new workflow automation page in the existing enterprise product to help users automate their investments.',
-			'Used NgRx and RxJS libraries to manage the application’s data flow.',
-			'Worked in Angular, HTML, and Sass to develop the UI of the new page.',
-			'Designed and implemented web services using C#, .NET, and Oracle for the workflow automation page.',
-			'Performed data schema changes through SQL migration scripts on existing database.',
-			'Built new endpoints to allow users to make modifications to workflows and save newly updated versions.',
-			'Wrote unit and integration tests for new features in Jasmine test and MSTest frameworks.',
+      'Designed robust fullstack services for investment workflow automation, catering to over 20 major corporations',
+      'Performed schema migrations on Oracle database like modifying columns, adding constraints and creating tables',
+      'Built a user interface for investment workflow, improving user experiences by eliminating hundreds of clicks',
+      'Modified and optimized SQL queries for backend services, resulting in 15% increase in workflow retrieval time'
 		],
-		techStack: ['Angular', 'Typescript', 'SCSS', 'C#', '.NET', 'SQL', 'Oracle'],
+		techStack: ['C#', '.NET', 'SQL', 'Oracle', 'Jenkins', 'Angular', 'Typescript', 'HTML', 'CSS'],
 	},
 	{
 		id: '2',
@@ -44,11 +45,10 @@ export const works = [
 			'DYNE is a user-based application aimed to help you connect with people from your community over food. Meet old friends, make new ones, or grow your network with us.',
 		website: 'https://dyneapp.ca',
 		duties: [
-			'Productionized a managing dashboard web app in React for restaurants to monitor meetups, coupons, promotions, etc.',
-			'Built, revamped, and added new features to the web dashboard through several quality assurance iterations.',
-			'Developed and fixed back-end services using Node.js, Express.js, and MongoDB.',
-			'Designed and implemented endpoints to analyze restaurants’ data from MongoDB for front-end visualization.',
-			'Maintained and fixed existing endpoints based on bugs/needs reported from the QA team or end users.',
+      'Implemented a restaurant management dashboard, supporting over 750 local restaurants',
+      'Developed back-end services for user analytics, promotions, ratings, etc., managing thousands of daily requests',
+      'Analyzed business data converting raw data into insightful analyses to enhance restaurant profitability',
+      'Refined services based on end-user and QA feedback, leading to performance enhancements and bug eradication'
 		],
 		techStack: ['React (Next.js)', 'Javascript', 'Node.js', 'MongoDB', 'Web services'],
 	},
@@ -56,17 +56,16 @@ export const works = [
 		id: '3',
 		name: 'Vecima Networks Inc',
 		positionName: 'Software QA Engineer Intern',
-		startDate: new Date(2021, 5 - 1),
+		startDate: new Date(2021, 1 - 1),
 		endDate: new Date(2021, 8 - 1),
 		imageUrl: '/works/Nero.png',
 		description:
 			"Nero Global's secure GPS fleet tracking management software for mobile service vehicles will reduce your costs and increase productivity.",
 		website: 'https://neroglobal.com/',
 		duties: [
-			'Performed manual and automated tests on software and hardware products.',
-			'Developed test plans and wrote test suites in Javascript and Sahi software throughout the Agile development cycle.',
-			'Reduced errors and failures of the existing test scripts up to 90 percent.',
-			'Executed automated test scripts and reported bugs and errors upon daily staging updates and bi-weekly production updates.',
+      'Improved automated tests on products by discovering and resolving 80% of errors and failures in test scripts',
+      'Streamlined testing by integrating automated tests using a CI pipeline, saving 10 hours of manual testing weekly',
+      'Designed test plans, tracked and documented bugs for daily and weekly releases to ensure product reliability'
 		],
 		techStack: ['Sahi - test automation software', 'Javascript'],
 	},
@@ -81,9 +80,8 @@ export const works = [
 			'A leading student-run software club based in the University of British Columbia devoted to building applications in a collaborative and professional environment.',
 		website: 'https://ubclaunchpad.com/',
 		duties: [
-			'Developed and deployed a Node.js back-end server for a project called Euphony to communicate with front-end app, web services, and machine learning server.',
-			'Integrated Node.js server with different APIs, including Spotify, OpenWeatherMap, and Mapbox.',
-			'Filtered, formatted, and processed data between different APIs, front-end inputs, and machine learning server',
+      'Developed a cross-platform music recommendation mobile app with over 500 downloads on the App Store',
+      'Managed the app’s CI pipeline with AWS for two years, efficiently managing a significant 250% growth in usage'
 		],
 		techStack: ['Node.js', 'Typescript', 'React Native', 'Web services'],
 	},
